@@ -19,7 +19,24 @@ public class Fire {
     @Min(value = 0, message = "severity must be positive")
     private int severity;
     private Instant date;
+    private String name;
 
+    public Fire(int severity, Instant date, String name) {
+        this.severity = severity;
+        this.date = date;
+        this.name = name;
+    }
+
+    public Fire() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
     @ManyToOne
     @JoinColumn(name = "fireman_id")
     private Fireman fireman;
@@ -31,23 +48,15 @@ public class Fire {
     public void setFireman(Fireman fireman) {
         this.fireman = fireman;
     }
-
-    public Fire(int severity, Instant date) {
-        this.severity = severity;
-        this.date = date;
-    }
-
     public Long getId() {
         return id;
     }
     public void setId(Long id) {
         this.id = id;
     }
-
-    public int getSeverity() {
+    public Integer getSeverity() {
         return severity;
     }
-    
     public void setSeverity(int severity) {
         this.severity = severity;
     }

@@ -72,9 +72,9 @@ public class ApiTests {
         fmList.add(fmTwo);
         fmList.add(fmThree);
 
-        Fire fireBaby = new Fire(1, Instant.now());
-        Fire fireMedium = new Fire(5, Instant.now());
-        Fire fireBig = new Fire(10, Instant.now());
+        Fire fireBaby = new Fire(1, Instant.now(), "");
+        Fire fireMedium = new Fire(5, Instant.now(), "");
+        Fire fireBig = new Fire(10, Instant.now(), "");
 
         List<Fire> fList = new ArrayList<Fire> ();
         fList.add(fireBaby);

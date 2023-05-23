@@ -21,6 +21,8 @@ public class Fireman {
         this.name = name;
     }
 
+    public Fireman(){}
+
     public Long getId() {
         return id;
     }
