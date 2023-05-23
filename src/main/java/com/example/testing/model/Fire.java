@@ -24,6 +24,14 @@ public class Fire {
     @JoinColumn(name = "fireman_id")
     private Fireman fireman;
 
+    public Fireman getFireman() {
+        return fireman;
+    }
+
+    public void setFireman(Fireman fireman) {
+        this.fireman = fireman;
+    }
+
     public Fire(int severity, Instant date) {
         this.severity = severity;
         this.date = date;

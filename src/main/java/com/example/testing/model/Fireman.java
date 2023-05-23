@@ -43,6 +43,9 @@ public class Fireman {
 
     public void setFires(List<Fire> fires) {
         this.fires = fires;
+        for (Fire fire : fires) {
+            fire.setFireman(this);
+          }
     }
 
 }
